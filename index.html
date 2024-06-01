@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by Josuu</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mensaje Personalizado</title>
+
+    <style>
+
+        body {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            height: 100vh;
+
+            background: linear-gradient(135deg, #fbc2eb 0%, #f4c2c2 100%);
+
+            font-family: 'Arial', sans-serif;
+
+            color: #ff66b2;
+
+            margin: 0;
+
+        }
+
+        .container {
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            text-align: center;
+
+            background: white;
+
+            padding: 40px;
+
+            border-radius: 15px;
+
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+        }
+
+        h1 {
+
+            margin-bottom: 20px;
+
+            font-size: 24px;
+
+        }
+
+        .button-container {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 20px; /* Espacio entre botones */
+
+            margin-top: 20px; /* Espacio arriba de los botones */
+
+        }
+
+        button {
+
+            padding: 10px 20px;
+
+            border: none;
+
+            border-radius: 25px;
+
+            background-color: #ff80bf; /* Color rosa más intenso */
+
+            color: white;
+
+            font-size: 16px;
+
+            cursor: pointer;
+
+            transition: background-color 0.3s;
+
+        }
+
+        button:hover {
+
+            background-color: #ff66a3; /* Color rosa más claro al pasar el mouse */
+
+        }
+
+        #yesButton {
+
+            margin-right: 25px; /* Mover hacia la izquierda */
+
+        }
+
+        #noButton {
+
+            margin-left: 20px; /* Mover hacia la derecha */
+
+            position: absolute; /* Añadir posición absoluta para poder mover */
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 id="question">¿Me extrañas?</h1>
+
+        <div class="button-container">
+
+            <button id="yesButton">Sí</button>
+
+            <button id="noButton">No</button>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        document.getElementById("yesButton").addEventListener("click", function() {
+
+           
+          document.getElementById("question").textContent = "tmb te extrañé, y tenes razón,  mi vida es aburrida sin vos";
+
+            document.getElementById("noButton").style.display = 'none';
+
+        });
+
+        document.getElementById("noButton").addEventListener("click", function() {
+
+            const x = Math.random() * (window.innerWidth - this.clientWidth);
+
+            const y = Math.random() * (window.innerHeight - this.clientHeight);
+
+            this.style.left = x + 'px';
+
+            this.style.top = y + 'px';
+
+        });
+
+        // Mover el botón Sí hacia la izquierda
+
+        const yesButton = document.getElementById("yesButton");
+
+        yesButton.style.position = 'relative'; // Cambiar a posición relativa para que se mueva
+
+        yesButton.style.left = '-10px'; // Mover hacia la izquierda
+// Mover el botón No hacia la derecha
+
+        const noButton = document.getElementById("noButton");
+
+        noButton.style.position = 'relative'; // Cambiar a posición relativa para que se mueva
+
+        noButton.style.left = '10px'; // Mover hacia la derecha 
+    </script>
+
+</body>
+
+</html>
+<!-- partial -->
+  
+</body>
+</html>
